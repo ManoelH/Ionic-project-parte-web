@@ -10,8 +10,16 @@
     <link rel="stylesheet" href="css/style-index.css">
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+    <!--<script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>-->
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
 
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-functions.js"></script>
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#config-web-app -->
 
@@ -33,7 +41,7 @@
     <title>Songs</title>
   </head>
   <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-primary">
           <a class="navbar-brand" href="#">Songs</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -41,14 +49,12 @@
         
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-            <button class="btn btn-outline-success my-2 " id="button-cad" type="button">
-              <a href="pages/cadastro.html"/>
-              Cadastrar-se</button>
+            <a class="btn btn-light" href="pages/cadastro.html" role="button" id="button-cad">Cadastrar-se</a>
           </div>
         </nav>
 
     <h1 id="titulo">Artista - login</h1>
-    <div id="div-cadastro">
+    <div id="div-login">
     <form id="form-cadastro">
         <div class="form-group">
           <label for="exampleInputEmail1">Email</label>

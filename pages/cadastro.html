@@ -9,18 +9,44 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style-cadastro.css">
 
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-functions.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDtibFP0wnv7L6HbaQBknP-Hc-HUMarjT0",
+        authDomain: "songs-50230.firebaseapp.com",
+        databaseURL: "https://songs-50230.firebaseio.com",
+        projectId: "songs-50230",
+        storageBucket: "songs-50230.appspot.com",
+        messagingSenderId: "145530453760",
+        appId: "1:145530453760:web:5b33005ef4496b81"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
     <title>Songs - Artista</title>
   </head>
   <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">Songs</a>
+      <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+          <a class="navbar-brand" href="../index.html">Songs</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
         
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-            <button class="btn btn-outline-success my-2 " id="button-cad" type="button">Cadastrar-se</button>
+            <!--itens para o recanto superior direito-->
           </div>
         </nav>
 
@@ -41,9 +67,9 @@
         </div>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <label class="input-group-text" for="inputGroupSelect01">Gênero</label>
+              <label class="input-group-text" for="generos">Gênero</label>
             </div>
-            <select class="custom-select" id="inputGroupSelect01">
+            <select class="custom-select" id="generos">
               <option selected>Escolha...</option>
               <option value="Axé">Axé</option>
               <option value="Black music">Black music</option>
@@ -64,16 +90,15 @@
               <option value="Hip Hop/Rap">Hip Hop/Rap</option>
             </select>
           </div>
-        <div class="form-group form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Li e concordo com os <a href="https://github.com/manoelh">termos de uso</a></label>
-        </div>
-        <button type="submit" class="btn btn-primary">Cadastrar</button>
+
+        <button id="cadastroArtista" type="button" class="btn btn-primary">Cadastrar</button>
     </form>
     </div>
-    
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="../js/utils/util.js"></script>
+    <script src="../js/Controllers/CadastrarArtista.js"></script>
   </body>
 </html>
