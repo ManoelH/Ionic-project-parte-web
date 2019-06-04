@@ -65,10 +65,10 @@
           <label for="exampleInputPassword1">Senha</label>
           <input type="password" class="form-control" id="senha" placeholder="Digite a senha">
         </div>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <label class="input-group-text" for="generos">Gênero</label>
-            </div>
+
+        <div class="form-group">
+          <label for="generos">Gênero musical</label>
+          <div class="input-group mb-3">
             <select class="custom-select" id="generos">
               <option selected>Escolha...</option>
               <option value="Axé">Axé</option>
@@ -89,7 +89,14 @@
               <option value="Heavy Metal">Heavy Metal</option>
               <option value="Hip Hop/Rap">Hip Hop/Rap</option>
             </select>
-          </div>
+          </div>  
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputPassword1">Imagem</label>
+            <input type="text" class="form-control" id="foto" placeholder="Digite aqui o endereço da imagem">
+        </div>
+        
 
         <button id="cadastroArtista" type="button" class="btn btn-primary">Cadastrar</button>
     </form>

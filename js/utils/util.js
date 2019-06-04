@@ -25,6 +25,12 @@ function validarArtistaCadastro(artista) {
         //$("#cargo").addClass("is-invalid");
     }
 
+    if (!artista.foto) {
+        validado = false;
+        //$("#nomeObr").show();
+        //$("#nome").addClass("is-invalid");
+    }
+
     return validado;
 }
 

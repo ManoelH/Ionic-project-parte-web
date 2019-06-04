@@ -48,16 +48,39 @@
           </button>
         
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-            <a id="logout" class="btn btn-light" role="button" id="button-cad">Sair</a>
+            <a id="logout" class="btn btn-light" role="button">Sair</a>
           </div>
         </nav>
 
-    <h1 id="titulo">Artista - principal</h1>
-    <div id="div-login">
-    <form id="form-principal">
-        
-    </form>
+    <h1 id="titulo">Cadastrar musica</h1>
+    <div id="div-cadmusica">
+      <form id="form-principal">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Nome da música</label>
+          <input type="email" class="form-control" id="email" placeholder="Digite o nome da música">
+        </div>
+        <div class="form-group">
+          <label for="album">Album</label>
+          <select class="custom-select" id="album">
+            <option selected>Escolha...</option>
+            <option value="Album1">Album1</option>
+            <option value="Album2">Album2</option>
+            <option value="Album3">Album3</option>
+          </select>
+        </div>
+
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupFileAddon01">Música</span>
+          </div>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" accept=".mp3, .mp4">
+            <label class="custom-file-label" for="inputGroupFile01">Escolha o arquivo</label>
+          </div>
+        </div>
+
+        <button id="cadmusica" type="button" class="btn btn-primary">Cadastrar</button>
+      </form>
     </div>
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
