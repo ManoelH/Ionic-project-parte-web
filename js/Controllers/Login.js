@@ -16,9 +16,25 @@ $(function () {
                 var errorMessage = error.message;
                 //console.log(`error code: ${errorCode}, error message: ${errorMessage}`)
               });
-            //window.location.href = '../pages/principal.html'  
-            console.log('USER AUTENTICATED')
+              window.location.href = '../Ionic-project-parte-web/pages/principal.html'
+              console.log('USER AUTENTICATED')
         }
+        
+    });   
+
+    $("#logout").click(function (e) {
+        e.preventDefault();
+        usuarioArtista = {
+            email: $('#email').val(),
+            senha: $('#senha').val(),
+        }
+
+        firebase.auth().signOut().then(function() {
+            window.location.href = "../index.html"
+          }).catch(function(error) {
+            // An error happened.
+          });
+        
         
     });   
 

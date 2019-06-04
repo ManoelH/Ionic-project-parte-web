@@ -1,0 +1,14 @@
+#titulo{
+    text-align: center;
+}
+
+#button-cad{
+    margin-left: 90%;
+}
+
+#div-cadastro{
+    padding: 10%;
+    width: 50%;
+    left: 25%;
+    position: sticky;
+}
