@@ -1,4 +1,4 @@
-function validarArtista(artista) {
+function validarArtistaCadastro(artista) {
     var validado = true;
 
     if (!artista.nome) {
@@ -23,6 +23,24 @@ function validarArtista(artista) {
         validado = false;
         //$("#cargoObr").show();
         //$("#cargo").addClass("is-invalid");
+    }
+
+    return validado;
+}
+
+function validarArtistaLogin(artista) {
+    var validado = true;
+
+    if (!artista.email) {
+        validado = false;
+        //$("#emailObr").show();
+        //$("#email").addClass("is-invalid");
+    }
+
+    if (!artista.senha || artista.senha.length < 6) {
+        validado = false;
+        //$("#senhaObr").show();
+        //$("#senha").addClass("is-invalid");
     }
 
     return validado;
